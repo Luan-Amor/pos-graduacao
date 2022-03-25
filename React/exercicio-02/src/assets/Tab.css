@@ -1,0 +1,25 @@
+.list-tab {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.tab-item{
+    color: cornflowerblue;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+    padding: 10px;
+    cursor: pointer;
+    font-size: large;
+}
+
+.tab-active {
+    color: rgb(42, 90, 179);
+    font-weight: bolder;
+    background-color: rgb(212, 222, 241);
+    border-radius: 10px;
+}
+
+.tab-content {
+    font-size: 3em;
+}
