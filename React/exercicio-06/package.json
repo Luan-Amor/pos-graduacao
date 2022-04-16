@@ -1,0 +1,24 @@
+{
+  "name": "exercicio-06",
+  "version": "1.0.0",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "npx expo-cli start",
+    "android": "npx expo-cli start --andorid",
+    "ios": "npx expo-cli start --ios",
+    "web": "npx expo-cli start --web",
+    "eject": "npx expo-cli eject"
+  },
+  "dependencies": {
+    "expo": "~44.0.0",
+    "expo-status-bar": "~1.2.0",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-native": "0.64.3",
+    "react-native-web": "0.17.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9"
+  },
+  "private": true
+}

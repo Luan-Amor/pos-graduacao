@@ -1,0 +1,1 @@
+# Exercício-06 - busca de posts no reddit pela tag 'javascript' - React Native
