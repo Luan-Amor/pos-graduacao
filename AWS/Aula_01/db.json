@@ -1,0 +1,34 @@
+{
+  "clientes": [
+    {
+      "id": 1,
+      "nome": "Luan",
+      "Sobrenome": "Amor",
+      "CPF": "111.111.111.11",
+      "Endereco": "Minha Casa",
+      "CEP": "72000-00",
+      "deletado": false
+    },
+    {
+      "id": 2,
+      "nome": "João",
+      "Sobrenome": "Silva",
+      "CPF": "222.222.222.22",
+      "Endereco": "Casa do João",
+      "CEP": "72111-11",
+      "deletado": false
+    },
+    {
+      "nome": "Maria",
+      "Sobrenome": "Silva",
+      "CPF": "333.333.333.33",
+      "Endereco": "Casa da Maria",
+      "CEP": "72222-22",
+      "deletado": true,
+      "id": 3
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,0 +1,4 @@
+{
+    "/*": "/$1",
+    "/clientes/:id/logico": "/clientes/:id"
+}
