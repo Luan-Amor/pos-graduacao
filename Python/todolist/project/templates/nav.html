@@ -1,0 +1,56 @@
+{% block navbar %}
+<section class="container">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="{{ url_for('main.index') }}">Home</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    {% if current_user.is_authenticated %}
+                    <li ><a href="{{ url_for('main.todo') }}">To Do</a></li>
+                    {% endif %}
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    {% if current_user.is_authenticated %}
+                        <li><a href="{{ url_for('auth.logout') }}">Logout</a></li>
+                    {% endif %}
+                    {% if not current_user.is_authenticated %}
+                        <li ><a href="{{ url_for('auth.login') }}">Login</a></li>
+                        <li ><a href="{{ url_for('auth.signup') }}">Sign Up</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <div class="navbar-end">
+                    <a href="{{ url_for('main.index') }}" class="navbar-item">
+                        Home
+                    </a>
+                    {% if current_user.is_authenticated %}
+                    <a href="{{ url_for('main.todo') }}" class="navbar-item">
+                        todo
+                    </a>
+                    {% endif %}
+                    {% if not current_user.is_authenticated %}
+                    <a href="{{ url_for('auth.login') }}" class="navbar-item">
+                        Login
+                    </a>
+                    <a href="{{ url_for('auth.signup') }}" class="navbar-item">
+                        Sign Up
+                    </a>
+                    {% endif %}
+                    {% if current_user.is_authenticated %}
+                    <a href="{{ url_for('auth.logout') }}" class="navbar-item">
+                        Logout
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </nav> -->
+</section>
+{% endblock navbar %}
