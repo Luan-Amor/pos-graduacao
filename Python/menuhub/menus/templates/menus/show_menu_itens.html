@@ -1,0 +1,23 @@
+{% extends "application.html" %}
+
+{% block content %}
+    <h1>Itens do Menu</h1>
+    <p>
+        <a href="{{ restaurant_id }}/new/" class="btn btn-primary">Incluir</a>
+        <a href="/" class="btn btn-primary">Voltar</a>
+    </p>
+    {% if menu_itens %}
+    {% for menu_item in menu_itens %}
+            <h4>{{ menu_item.category }}</h4>
+            <h5>{{ menu_item.name }}</h5> 
+            <p class="lead small">{{ menu_item.description }}</p>
+            <p>R$ {{ menu_item.price }}</p>
+            <p>
+            <a href='{{ menu_item.restaurant_id }}/edit/{{ menu_item.id }}' class="btn btn-success">Edit</a>
+            <a href='{{ menu_item.restaurant_id }}/delete/{{ menu_item.id }}' class="btn btn-danger">Delete</a>
+            </p>
+        {% endfor %}
+    {% else %}
+        <p>Nenhum item no menu, por favor inclua um.</p>
+    {% endif %}
+{% endblock content %}

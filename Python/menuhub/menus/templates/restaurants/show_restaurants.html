@@ -1,0 +1,25 @@
+{% extends "application.html" %}
+
+{% block content %}
+    <h1>Restaurantes no MenuHub</h1>
+    <p>
+        <a href="new/" class="btn btn-primary">Incluir</a>
+    </p>
+    {% if restaurants %}
+        <ul class="list-group">
+            {% for restaurant in restaurants %}
+                <li class="list-group-item h5" style="display: flex; justify-content: space-between;">
+                    {{ restaurant.name }}
+                    <div>
+                        <a href='{{ restaurant.restaurant_id }}/avaliar/{{ restaurant.id }}' class="btn btn-warning">Avaliar</a>
+                        <a href='{{ restaurant.restaurant_id }}/menus/{{ restaurant.id }}' class="btn btn-primary">Menu</a>
+                        <a href='{{ restaurant.restaurant_id }}/edit/{{ restaurant.id }}' class="btn btn-success">Edit</a>
+                        <a href='{{ restaurant.restaurant_id }}/delete/{{ restaurant.id }}' class="btn btn-danger">Delete</a>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Nenhum restaurante no MenuHub, por favor inclua um.</p>
+    {% endif %}
+{% endblock content %}
